@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head> </head>
+<title>oneSdk onboarding</title>
+<script src="https://assets.frankiefinancial.io/one-sdk/v0.7-alpha/oneSdk.umd.js"></script>
+
+<!--  Uncomment this below line to enable SmartUI demo -->
+<!-- <script src="https://assets.frankiefinancial.io/onboarding/v4/ff-onboarding-widget.umd.min.js"></script> -->
+
+<style>
+  #spanResult {
+      white-space: pre-line;
+  }
+</style>
+
+</head>
+
+<body style="background-color: #98BF64">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="biometrics-container"></div>
+  <input type="button" value="Say hello to Android" onClick="showAndroidToast('Hello Android!')" />
+
+  <input type="button" value="Create Entity" onClick="createEntity()" />
+  <input type="button" value="Create Session" onClick="getSessionObject()" />
+
+  
+  <button onclick="document.getElementById('getDocument').click()">Upload your id</button>
+  <input type='file' id="getDocument" accept="image/jpeg, image/png" style="display:none;">
+  
+  <input type="button" value="Start OneSDK" onClick="startOneSDK()" />
+
+  
+  <span id="spanResult"><br/>Please click buttons in order as they appear in the UI.<br/>Logs will be appended here</span>
+
+  <!-- <input type="button" value="Start SmartUI" onClick="initSmartUI()" /> -->
+  <div id="root"></div>
+
+  <!--  Uncomment this below line to enable SmartUI demo -->
+  <!-- <div><ff-onboarding-widget></ff-onboarding-widget></div> -->
+
+  <script src="./script.js"></script>
+</body>
